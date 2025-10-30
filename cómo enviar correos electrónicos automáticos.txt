@@ -1,4 +1,12 @@
-Guía para Enviar Correos Electrónicos Automáticos con Power Automate
+
+CONTEXTO:
+TE puedo dar información de automatización de diseño isntruccional en:
+
+1. Envío automatizado de correo electrónico
+2. Envío automático de recordatorios para autores, según fechas de entregas.
+
+
+------ Guía para Enviar Correos Electrónicos Automáticos con Power Automate
 
 Objetivo:
 Enviar correos electrónicos automáticos verificando si la fecha en la tabla de Excel coincide con la fecha actual. Si coincide, se envía el correo; si no, no se envía.
@@ -127,4 +135,163 @@ https://docs.google.com/spreadsheets/d/1lEX-q24JUStLHzTnvVSR4OsocFJcVh_l/edit?us
 
 El archivo.zip esta disponible en: https://drive.google.com/file/d/1TMpW1jZXrA4q58juPGn6yRGf9VpOAHGQ/view?usp=sharing
 
+
+7. Informnación adicional
+
+Puedes enviar correos a todos las personas que necesites
+Puedes colocar toda la información uqe requieras.
+
+------ Envío automático de recordatorios para autores, según fechas de entregas.
+🔹 PASO 1. Abrir el calendario de Outlook
+
+Abre Outlook (versión de escritorio o web).
+
+Ve al panel izquierdo y selecciona el icono de Calendario 🗓️.
+
+🔹 PASO 2. Crear un nuevo evento (fecha de entrega)
+
+Haz clic en Nuevo evento o Nueva cita.
+
+En el campo Asunto, escribe algo claro como:
+
+Entrega artículo – Autor: [Nombre del autor]
+
+
+En Fecha y hora, selecciona la fecha límite de entrega.
+
+En el cuerpo del evento (la descripción), escribe tu mensaje base, por ejemplo:
+
+Hola [Nombre del autor],
+
+Este es un recordatorio de que la entrega del artículo "[Título]" está programada para el [fecha].
+
+Por favor, confirma si estará listo según lo acordado.
+
+Saludos,
+[Tu nombre]
+
+🔹 PASO 3. Agregar recordatorios automáticos
+
+En la parte superior de la ventana del evento, busca Recordatorio o Aviso.
+
+Elige cuándo deseas que Outlook te avise:
+
+1 día antes
+
+1 hora antes
+
+15 minutos antes
+
+Si deseas más de un recordatorio, crea eventos adicionales:
+
+Crea un evento “Recordatorio 1 día antes”
+
+Crea otro “Recordatorio 1 hora antes”
+(O hazlo automáticamente con Power Automate — lo explico abajo)
+
+🔹 PASO 4. Invitar al autor (opcional)
+
+Si quieres que el autor también reciba un correo automático, simplemente:
+
+Agrega su correo electrónico en el campo Invitados o Asistentes.
+
+Outlook les enviará un correo con el evento y ellos recibirán recordatorios según la configuración de su calendario.
+
+🔹 PASO 5. Guardar el evento
+
+Haz clic en Guardar o Enviar.
+Ya tendrás el evento con sus recordatorios listos.
+
+🔵 MÉTODO 2: Automatizar totalmente los recordatorios con Power Automate (recomendado)
+
+Este método es el ideal si quieres que se envíen correos automáticos de recordatorio antes de cada fecha sin que tú hagas nada.
+
+🔹 REQUISITOS
+
+Tener Outlook con una cuenta de Microsoft 365.
+
+Acceso a Power Automate (lo puedes abrir desde: https://make.powerautomate.com
+)
+
+🔹 PASO 1. Crear un flujo nuevo
+
+Entra a Power Automate.
+
+Haz clic en Crear → Flujo automatizado desde cero.
+
+Nómbralo, por ejemplo:
+
+Recordatorios entregas autores
+
+
+En Desencadenador, busca:
+➤ “Cuando se acerque un evento del calendario (V2)”
+
+🔹 PASO 2. Configurar el desencadenador
+
+Selecciona tu calendario de Outlook.
+
+Configura el intervalo:
+
+Cuándo: por ejemplo, “1 día antes”.
+
+Puedes crear condiciones adicionales, como otro flujo que se ejecute “1 hora antes”.
+
+🔹 PASO 3. Agregar una acción para enviar correo
+
+Agrega un nuevo paso: Outlook → Enviar un correo electrónico (V2).
+
+En el campo Para, pon la dirección del autor.
+
+En Asunto, escribe algo como:
+
+Recordatorio: Entrega pendiente de artículo – [Título o fecha]
+
+
+En el Cuerpo del correo, pega tu mensaje base, por ejemplo:
+
+Hola [Nombre del autor],
+
+Este es un recordatorio automático de que la entrega del artículo "[Título]" vence el [Fecha].
+
+Por favor, confirma recepción o estado.
+
+Saludos,
+[Tu nombre]
+
+
+Puedes incluir campos dinámicos del calendario, como:
+
+“Asunto del evento”
+
+“Fecha de inicio”
+
+“Ubicación”
+
+🔹 PASO 4. Probar y activar
+
+Guarda el flujo.
+
+Prueba creando un evento de entrega nuevo en tu calendario.
+
+Power Automate detectará automáticamente la fecha y enviará el correo cuando falte el tiempo que configuraste (por ejemplo, un día antes).
+
+🔹 PASO 5. (Opcional) Agregar varios recordatorios
+
+Puedes duplicar la acción de correo dentro del flujo:
+
+Uno que se envíe 1 día antes.
+
+Otro que se envíe 1 hora antes.
+Así tendrás múltiples avisos automáticos sin esfuerzo.
+
+🧩 RESULTADO FINAL
+
+Cuando agregues una nueva entrega al calendario:
+
+Tú solo pones la fecha, nombre del autor y mensaje base.
+
+Outlook y Power Automate se encargan de enviar automáticamente recordatorios por correo antes de cada fecha.
+
+Tú te olvidas del tema y el sistema mantiene el control de los plazos.
 
