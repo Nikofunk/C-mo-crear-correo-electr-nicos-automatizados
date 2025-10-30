@@ -1,0 +1,126 @@
+Guía para Enviar Correos Electrónicos Automáticos con Power Automate
+
+Objetivo:
+Enviar correos electrónicos automáticos verificando si la fecha en la tabla de Excel coincide con la fecha actual. Si coincide, se envía el correo; si no, no se envía.
+
+Nota: Las cuentas personales no tienen acceso a Power Automate completo, por lo que se debe usar una cuenta corporativa (por ejemplo: nlesmes@ucatolica.edu.co).
+
+1. Importar el flujo en Power Automate
+
+Ir a Mis flujos.
+
+Seleccionar Importar → Importar paquete.
+
+En la ventana de importación:
+
+Hacer clic en Actualizar configuración.
+
+Elegir Crear nuevo y luego Guardar.
+
+Ir a Recursos relacionados → Importar configuración:
+
+Durante la importación, seleccionar la cuenta que aparece en la parte inferior (nlesmes@ucatolica.edu.co) 3 veces.
+
+Hacer clic en Importar.
+
+Hacer clic en el lápiz para editar el flujo.
+
+Se deben actualizar:
+
+La tabla de Excel
+
+La imagen de la firma institucional
+
+El cuerpo del correo
+
+Guardar los cambios.
+
+Hacer clic en Atrás, luego clic derecho sobre el flujo y seleccionar Activar.
+
+2. Preparar el archivo de Excel
+Requisitos del archivo
+
+Debe contener la información en tabla (no solo formato de tabla visual, usar Insertar → Tabla).
+
+La tabla puede incluir variables para el correo:
+
+Nombres de autores
+
+Correos electrónicos
+
+Fechas
+
+Enlaces a carpetas o encuentros grabados
+
+Cualquier otra variable que se quiera incluir en el correo
+
+Actualizar el flujo con el archivo
+
+Dentro del flujo, seleccionar el ítem Enumerar filas de una tabla.
+
+En la ventana que aparece:
+
+Ubicación: OneDrive for Business
+
+Seleccionar el archivo en la opción File dentro de OneDrive.
+
+Guardar cambios.
+
+3. Configurar la imagen de la firma institucional
+
+Subir la imagen a OneDrive (preferiblemente en PNG).
+
+Dentro del flujo, seleccionar Obtener contenido de archivo mediante ruta de acceso.
+
+En Ruta del archivo, buscar la imagen en OneDrive.
+
+Recomendación: colocar todos los archivos relacionados en la misma carpeta, por ejemplo, Automatización.
+
+4. Configurar el envío de correos
+
+Seleccionar el ítem final del flujo: Enviar correo de prueba.
+
+Editar los elementos del correo:
+
+Destinatario: seleccionar variable de la columna de correos del Excel.
+
+Asunto: usar la variable correspondiente del Excel.
+
+Cuerpo del correo: incluir variables de Excel para personalizar:
+
+Nombre del autor
+
+Nombre del curso
+
+Enlaces a carpetas
+
+Fechas
+
+Otros datos relevantes
+
+Para insertar una variable:
+
+Dentro del correo, hacer clic en el icono tipo rayo → Salidas → icono de Excel.
+
+Hacer clic en Ver más → aparecerán todas las variables de la tabla.
+
+Seleccionar la variable deseada y colocarla en el lugar del correo que corresponda.
+
+Cada fila del Excel representa un correo. Las variables se actualizarán automáticamente según la fila correspondiente.
+
+5. Cómo funciona la verificación de fechas
+
+La tabla de Excel debe tener una columna Fecha de entrega.
+
+El flujo revisa si la fecha actual coincide con la fecha de la fila.
+
+Si coincide → se envía el correo.
+
+Si no → no se envía correo a esa fila.
+
+Formato de fecha: AAAA-MM-DD (Ej: 2025-10-30).
+
+6. Plantilla de Excel
+
+La plantilla de Excel para configurar el flujo está disponible en:
+Plantilla Excel Power Automate
