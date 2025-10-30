@@ -123,4 +123,8 @@ Formato de fecha: AAAA-MM-DD (Ej: 2025-10-30).
 6. Plantilla de Excel
 
 La plantilla de Excel para configurar el flujo está disponible en:
-Plantilla Excel Power Automate
+https://docs.google.com/spreadsheets/d/1lEX-q24JUStLHzTnvVSR4OsocFJcVh_l/edit?usp=sharing&ouid=110649863026191448246&rtpof=true&sd=true
+
+El archivo.zip esta disponible en: https://drive.google.com/file/d/1TMpW1jZXrA4q58juPGn6yRGf9VpOAHGQ/view?usp=sharing
+
+
