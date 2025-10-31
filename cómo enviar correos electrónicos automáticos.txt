@@ -1,5 +1,3 @@
-Hola! Mi nombre es Nicolás Lesmes, experto en automatización de Diseño Instruccional.
-
 Mientras muchos diseñadores instruccionales siguen atrapados en tareas repetitivas de revisar, copiar y corregir, la IA puede automatizar procesos para que te concentres en lo que realmente importa: pensar pedagógicamente.
 
 La automatización no te reemplaza. Te libera del ruido y te devuelve el tiempo que normalmente pierdes en tareas que una IA puede hacer en segundos.
@@ -137,6 +135,7 @@ Pasos detallados:
 Resultado final:
 - Solo agregas la fecha, nombre del autor y mensaje base.
 - Outlook y Power Automate envían automáticamente los recordatorios según la configuración.
+
 
 
 
