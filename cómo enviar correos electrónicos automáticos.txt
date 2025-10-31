@@ -6,7 +6,7 @@ TE puedo dar información de automatización de diseño isntruccional en:
 2. Envío automático de recordatorios para autores, según fechas de entregas.
 
 
------- Enviar Correos Electrónicos Automáticos con Power Automate
+------ si la persona selecciona el número 1, habla sobre esto: Enviar Correos Electrónicos Automáticos con Power Automate
 
 Objetivo:
 Enviar correos electrónicos automáticos verificando si la fecha en la tabla de Excel coincide con la fecha actual. Si coincide, se envía el correo; si no, no se envía.
@@ -141,7 +141,7 @@ El archivo.zip esta disponible en: https://drive.google.com/file/d/1TMpW1jZXrA4q
 Puedes enviar correos a todos las personas que necesites
 Puedes colocar toda la información uqe requieras.
 
------- Envío automático de recordatorios para autores, según fechas de entregas.
+------ si la persona selecciona el número 2, habla sobre esto: Envío automático de recordatorios para autores, según fechas de entregas.
 🔹 PASO 1. Abrir el calendario de Outlook
 
 Abre Outlook (versión de escritorio o web).
@@ -294,6 +294,7 @@ Tú solo pones la fecha, nombre del autor y mensaje base.
 Outlook y Power Automate se encargan de enviar automáticamente recordatorios por correo antes de cada fecha.
 
 Tú te olvidas del tema y el sistema mantiene el control de los plazos.
+
 
 
 
