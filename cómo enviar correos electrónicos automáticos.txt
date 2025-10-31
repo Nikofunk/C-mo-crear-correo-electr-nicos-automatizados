@@ -1,140 +1,321 @@
-Mientras muchos diseñadores instruccionales siguen atrapados en tareas repetitivas de revisar, copiar y corregir, la IA puede automatizar procesos para que te concentres en lo que realmente importa: pensar pedagógicamente.
+CONTEXTO COMPLETO PARA AUTOMATIZACIÓN EN DISEÑO INSTRUCCIONAL
+FILOSOFÍA Y FUNDAMENTOS
+Problema actual:
 
-La automatización no te reemplaza. Te libera del ruido y te devuelve el tiempo que normalmente pierdes en tareas que una IA puede hacer en segundos.
+Muchos diseñadores instruccionales siguen atrapados en tareas repetitivas manuales
 
-Puedo darte información sobre automatización de diseño instruccional en dos áreas:
+Tiempo consumido en: revisar contenido, copiar y pegar información, corregir formatos, gestionar comunicaciones
 
-1️⃣ Enviar correos electrónicos automáticos.
-2️⃣ Envío automático de recordatorios para autores según fechas de entrega.
+Esto les impide concentrarse en el valor real de su trabajo: el pensamiento pedagógico estratégico
 
-Por favor, selecciona 1 o 2 para obtener información detallada.
+Propuesta de valor:
 
----
+La automatización con IA no reemplaza al diseñador instruccional
 
-Opción 1 – Enviar correos electrónicos automáticos con Power Automate
+Libera del "ruido" operativo y administrativo
 
-Objetivo:
-Enviar correos electrónicos automáticos verificando si la fecha en la tabla de Excel coincide con la fecha actual.
-- Si coincide → se envía el correo.
-- Si no coincide → no se envía correo.
+Recupera el tiempo que normalmente se pierde en tareas que una IA puede realizar en segundos
 
-Requisitos:
-- Cuenta corporativa con acceso a Power Automate (las cuentas personales no permiten todas las funciones).
+Permite enfocarse en: estrategias de aprendizaje, experiencia del usuario, innovación pedagógica
 
-Pasos detallados:
+OPCIONES DETALLADAS DE AUTOMATIZACIÓN
+🔹 OPCIÓN 1: ENVÍO AUTOMÁTICO DE CORREOS ELECTRÓNICOS CON POWER AUTOMATE
+OBJETIVO ESPECÍFICO:
+Enviar correos electrónicos automáticos que se activan cuando la fecha registrada en una tabla de Excel coincide con la fecha actual del sistema.
 
-1️⃣ Importar el flujo en Power Automate
-1. Ir a Mis flujos.
-2. Seleccionar Importar → Importar paquete.
-3. En la ventana de importación:
-   - Clic en Actualizar configuración.
-   - Elegir Crear nuevo y luego Guardar.
-4. Ir a Recursos relacionados → Importar configuración:
-   - Durante la importación, seleccionar la cuenta corporativa (nlesmes@ucatolica.edu.co) 3 veces.
-5. Hacer clic en Importar.
-6. Hacer clic en el lápiz para editar el flujo.
-7. Actualizar los siguientes elementos:
-   - Tabla de Excel
-   - Imagen de la firma institucional
-   - Cuerpo del correo
-8. Guardar los cambios, hacer clic en Atrás, luego clic derecho sobre el flujo y seleccionar Activar.
+Si coincide → se envía el correo automáticamente
 
-2️⃣ Preparar el archivo de Excel
+Si no coincide → no se realiza ninguna acción
 
-Requisitos del archivo:
-- Debe ser una tabla real (Insertar → Tabla) y no solo formato visual.
-- La tabla puede contener variables para personalizar el correo:
-  - Nombre del autor
-  - Correo electrónico
-  - Fechas de entrega
-  - Enlaces a carpetas o grabaciones de encuentros
-  - Cualquier otra información necesaria
+REQUISITOS TÉCNICOS:
 
-Actualizar el flujo con el archivo:
-1. Dentro del flujo, seleccionar el ítem Enumerar filas de una tabla.
-2. En la ventana que aparece:
-   - Ubicación: OneDrive for Business
-   - Archivo: seleccionar el Excel correspondiente en OneDrive
-3. Guardar los cambios.
+Cuenta corporativa con acceso completo a Power Automate (las cuentas personales gratuitas no permiten todas las funciones necesarias)
 
-3️⃣ Configurar la imagen de la firma institucional
+Acceso a Microsoft 365 (OneDrive, Excel Online)
 
-1. Subir la imagen a OneDrive (preferiblemente en PNG).
-2. Dentro del flujo, seleccionar Obtener contenido de archivo mediante ruta de acceso.
-3. En Ruta del archivo, buscar la imagen en OneDrive.
-4. Recomendación: colocar todos los archivos relacionados en una misma carpeta, por ejemplo Automatización.
+Permisos para crear y ejecutar flujos automatizados
 
-4️⃣ Configurar el envío de correos
+PASOS DETALLADOS PASO A PASO:
 
-1. Seleccionar el ítem final del flujo: Enviar correo de prueba.
-2. Editar los elementos del correo:
-   - Destinatario: variable de la columna de correos del Excel
-   - Asunto: variable correspondiente del Excel
-   - Cuerpo del correo: incluir variables dinámicas como:
-     - Nombre del autor
-     - Nombre del curso
-     - Enlaces a carpetas
-     - Fechas de entrega
-     - Otros datos relevantes
-3. Para insertar una variable:
-   - Dentro del correo, hacer clic en el icono tipo rayo → Salidas → Excel
-   - Clic en Ver más → seleccionar la variable deseada
-   - Colocar la variable en el lugar correspondiente del correo
-4. Cada fila del Excel representa un correo. Las variables se actualizarán automáticamente según la fila correspondiente.
+1️⃣ IMPORTAR EL FLUJO EN POWER AUTOMATE
+Ir a la plataforma Power Automate: https://make.powerautomate.com
 
-5️⃣ Verificación de fechas
+Acceder a "Mis flujos" en el menú lateral
 
-- La tabla de Excel debe tener una columna Fecha de entrega.
-- Formato de fecha: AAAA-MM-DD (Ej: 2025-10-30).
-- El flujo revisa si la fecha actual coincide con la fecha de la fila:
-  - Si coincide → envía el correo
-  - Si no coincide → no envía correo
+Seleccionar "Importar" → "Importar paquete" (archivo .zip)
 
-6️⃣ Recursos
+En la ventana de importación:
 
-- Plantilla de Excel: https://docs.google.com/spreadsheets/d/1lEX-q24JUStLHzTnvVSR4OsocFJcVh_l/edit?usp=sharing
-- Archivo .zip con flujo: https://drive.google.com/file/d/1TMpW1jZXrA4q58juPGn6yRGf9VpOAHGQ/view?usp=sharing
+Hacer clic en "Actualizar configuración"
 
-7️⃣ Información adicional
+Elegir "Crear nuevo" para todas las conexiones
 
-- Puedes enviar correos a todos los autores que necesites.
-- Puedes incluir todas las variables o información que desees en el correo.
+Hacer clic en "Guardar"
 
----
+Ir a "Recursos relacionados" → "Importar configuración":
 
-Opción 2 – Envío automático de recordatorios para autores según fechas de entrega
+Durante la importación, seleccionar la cuenta corporativa (ejemplo: nlesmes@ucatolica.edu.co) las 3 veces que se solicite
 
-Método 1 – Manual usando Outlook
-1. Abrir Outlook → panel izquierdo → Calendario 🗓️
-2. Crear nuevo evento:
-   - Asunto: Entrega artículo – Autor: [Nombre del autor]
-   - Fecha y hora: fecha límite de entrega
-   - Cuerpo: mensaje base personalizado con variables [Nombre del autor], [Título], [Fecha]
-3. Configurar recordatorios: 1 día, 1 hora, 15 minutos antes, según necesidad
-4. (Opcional) Invitar al autor agregando su correo en Asistentes
-5. Guardar el evento
+Hacer clic en "Importar" y esperar a que finalice el proceso
 
-Método 2 – Automatizado con Power Automate (recomendado)
+Una vez importado, hacer clic en el ícono de lápiz para editar el flujo
 
-Requisitos:
-- Outlook con Microsoft 365
-- Acceso a Power Automate: https://make.powerautomate.com
+Actualizar los siguientes elementos según necesidades específicas:
 
-Pasos detallados:
+Tabla de Excel de origen de datos
 
-1. Crear un flujo automatizado desde cero → nombrarlo Recordatorios entregas autores
-2. Desencadenador: Cuando se acerque un evento del calendario (V2)
-3. Configurar calendario y condiciones de tiempo (ej. 1 día antes)
-4. Agregar acción: Outlook → Enviar un correo electrónico (V2)
-   - Para: correo del autor
-   - Asunto: Recordatorio: Entrega pendiente de artículo – [Título o fecha]
-   - Cuerpo: mensaje base con variables [Nombre del autor], [Título], [Fecha]
-5. Probar el flujo creando un evento de entrega nuevo en el calendario
-6. (Opcional) Duplicar la acción de correo para múltiples recordatorios: 1 día antes, 1 hora antes, etc.
+Imagen de la firma institucional
 
-Resultado final:
-- Solo agregas la fecha, nombre del autor y mensaje base.
-- Outlook y Power Automate envían automáticamente los recordatorios según la configuración.
+Cuerpo del correo electrónico
+
+Variables y campos personalizados
+
+Guardar los cambios, hacer clic en "Atrás", luego clic derecho sobre el flujo y seleccionar "Activar"
+
+2️⃣ PREPARAR EL ARCHIVO DE EXCEL
+REQUISITOS CRÍTICOS DEL ARCHIVO:
+
+El archivo DEBE ser una tabla real de Excel (Insertar → Tabla) no solo celdas con formato visual
+
+La tabla puede contener múltiples variables para personalizar cada correo:
+
+Nombre del autor
+
+Correo electrónico del destinatario
+
+Fechas de entrega específicas
+
+Enlaces a carpetas o recursos
+
+Grabaciones de encuentros o sesiones
+
+Cualquier otra información relevante para la comunicación
+
+ACTUALIZAR EL FLUJO CON EL ARCHIVO EXCEL:
+
+Dentro del flujo editado, seleccionar el ítem "Enumerar filas de una tabla"
+
+En la ventana de configuración que aparece:
+
+Ubicación: Seleccionar "OneDrive for Business"
+
+Archivo: Buscar y seleccionar el archivo Excel correspondiente en OneDrive
+
+Tabla: Seleccionar la tabla específica dentro del archivo
+
+Guardar los cambios en el flujo
+
+3️⃣ CONFIGURAR LA IMAGEN DE LA FIRMA INSTITUCIONAL
+Subir la imagen a OneDrive (formato preferido: PNG para mejor calidad)
+
+Dentro del flujo, seleccionar la acción "Obtener contenido de archivo mediante ruta de acceso"
+
+En "Ruta del archivo", buscar y seleccionar la imagen subida en OneDrive
+
+Recomendación de organización: Colocar todos los archivos relacionados (Excel, imágenes, documentos) en una misma carpeta, por ejemplo: "Automatización Diseño Instruccional"
+
+4️⃣ CONFIGURAR EL ENVÍO DE CORREOS
+Seleccionar el ítem final del flujo: "Enviar correo de prueba"
+
+Editar meticulosamente cada elemento del correo:
+
+Destinatario: Variable de la columna de correos del Excel (se inserta dinámicamente)
+
+Asunto: Variable correspondiente del Excel o texto personalizado
+
+Cuerpo del correo: Incluir todas las variables dinámicas necesarias como:
+
+Nombre del autor
+
+Nombre del curso o proyecto
+
+Enlaces a carpetas específicas
+
+Fechas de entrega críticas
+
+Instrucciones particulares
+
+Otros datos relevantes
+
+PARA INSERTAR UNA VARIABLE DINÁMICAMENTE:
+
+Dentro del editor del cuerpo del correo, hacer clic en el icono tipo rayo (Insertar datos dinámicos)
+
+Seleccionar "Salidas" → "Excel"
+
+Hacer clic en "Ver más" → seleccionar la variable deseada de la lista
+
+Colocar la variable en la posición exacta del correo donde debe aparecer
+
+LÓGICA DE ENVÍO: Cada fila del Excel representa un correo independiente. Las variables se actualizarán automáticamente según la fila correspondiente que coincida con la fecha.
+
+5️⃣ VERIFICACIÓN DE FECHAS - CONFIGURACIÓN CRÍTICA
+La tabla de Excel DEBE tener una columna específica llamada "Fecha de entrega" o similar
+
+Formato de fecha ESTÁNDAR: AAAA-MM-DD (Ejemplo: 2025-10-30)
+
+Mecanismo del flujo:
+
+Revisa diariamente si la fecha actual del sistema coincide con alguna fecha en la columna de fechas
+
+Si coincide → ejecuta el envío del correo con todos los datos de esa fila
+
+Si no coincide → pasa a la siguiente fila sin realizar acción
+
+6️⃣ RECURSOS Y MATERIALES
+Plantilla de Excel preconfigurada: https://docs.google.com/spreadsheets/d/1lEX-q24JUStLHzTnvVSR4OsocFJcVh_l/edit?usp=sharing
+
+Archivo .zip con flujo completo: https://drive.google.com/file/d/1TMpW1jZXrA4q58juPGn6yRGf9VpOAHGQ/view?usp=sharing
+
+7️⃣ INFORMACIÓN ADICIONAL Y ESCALABILIDAD
+Escalabilidad: Puedes enviar correos a todos los autores que necesites simultáneamente
+
+Flexibilidad: Puedes incluir todas las variables o información que desees en el correo
+
+Personalización: Cada autor recibe un correo único con su información específica
+
+Mantenimiento: Solo necesitas actualizar el archivo Excel para modificar los envíos
+
+🔹 OPCIÓN 2: ENVÍO AUTOMÁTICO DE RECORDATORIOS PARA AUTORES SEGÚN FECHAS DE ENTREGA
+MÉTODO 1 – MANUAL USANDO OUTLOOK (OPCIÓN BÁSICA)
+PROCESO DETALLADO:
+
+Abrir Outlook → panel izquierdo → Calendario 🗓️
+
+Crear nuevo evento:
+
+Asunto: Formato estandarizado: "Entrega artículo – Autor: [Nombre del autor]"
+
+Fecha y hora: Configurar exactamente para la fecha límite de entrega
+
+Cuerpo del evento: Mensaje base personalizado con variables:
+
+[Nombre del autor]
+
+[Título del artículo o proyecto]
+
+[Fecha límite específica]
+
+[Instrucciones detalladas]
+
+Configurar recordatorios escalonados:
+
+1 día antes del vencimiento
+
+1 hora antes del vencimiento
+
+15 minutos antes (opcional, según necesidad y urgencia)
+
+(Opcional) Invitar al autor agregando su correo electrónico en "Asistentes" para que reciba notificaciones automáticas del calendario
+
+Guardar el evento y repetir el proceso para cada autor y entrega
+
+MÉTODO 2 – AUTOMATIZADO CON POWER AUTOMATE (RECOMENDADO PARA VOLUMEN)
+REQUISITOS TÉCNICOS:
+
+Outlook con Microsoft 365 empresarial
+
+Acceso completo a Power Automate: https://make.powerautomate.com
+
+Permisos para crear flujos automatizados
+
+PASOS DETALLADOS PASO A PASO:
+
+Crear un flujo automatizado desde cero:
+
+Nombrarlo descriptivamente: "Recordatorios entregas autores"
+
+Seleccionar plantilla: "Flujo automatizado en blanco"
+
+Configurar desencadenador:
+
+Buscar y seleccionar: "Cuando se acerque un evento del calendario (V2)"
+
+Conectar con la cuenta de Outlook corporativa
+
+Configurar parámetros de tiempo:
+
+Calendario: Seleccionar el calendario principal de Outlook
+
+Intervalo de antelación: Ej. "1" (día antes)
+
+Unidad de tiempo: "Día" (puede ser horas, minutos según necesidad)
+
+Agregar acción de correo:
+
+Buscar y agregar: "Outlook → Enviar un correo electrónico (V2)"
+
+Configurar campos:
+
+Para: Correo del autor (puede ser variable del evento)
+
+Asunto: "Recordatorio: Entrega pendiente de artículo – [Título o fecha]"
+
+Cuerpo: Mensaje base con variables dinámicas:
+
+[Nombre del autor]
+
+[Título del proyecto]
+
+[Fecha de entrega]
+
+[Enlaces relevantes]
+
+Probar el flujo exhaustivamente:
+
+Crear un evento de entrega nuevo en el calendario con fecha próxima
+
+Verificar que el flujo se ejecute correctamente
+
+Confirmar recepción del correo recordatorio
+
+(Opcional) Duplicar la acción para múltiples recordatorios:
+
+Recordatorio 1: 1 día antes
+
+Recordatorio 2: 1 hora antes
+
+Recordatorio 3: 15 minutos antes (para urgencias)
+
+RESULTADO FINAL ESPERADO:
+
+Solo necesitas agregar la fecha, nombre del autor y mensaje base en el calendario
+
+Outlook y Power Automate envían automáticamente todos los recordatorios configurados
+
+Sistema completamente automatizado que escala para múltiples autores y proyectos simultáneamente
+
+Reducción del 100% de los olvidos en recordatorios de entrega
+
+BENEFICIOS TANGIBLES DE LA AUTOMATIZACIÓN
+✅ EFICIENCIA OPERATIVA
+Reducción de 80-90% en tiempo dedicado a tareas repetitivas de comunicación
+
+Eliminación prácticamente total de errores humanos en envíos masivos
+
+Consistencia garantizada en toda la comunicación institucional
+
+✅ RECUPERACIÓN DE TIEMPO ESTRATÉGICO
+Tiempo recuperado: 5-10 horas semanales para un diseñador instruccional típico
+
+Enfoque redirigido: De tareas administrativas a diseño pedagógico de valor
+
+Capacidad aumentada: Manejar más proyectos sin aumentar carga laboral
+
+✅ CALIDAD Y PROFESIONALISMO
+Comunicación consistente: Mismo estándar profesional para todos los autores
+
+Personalización masiva: Cada autor recibe trato individualizado automáticamente
+
+Escalabilidad demostrable: Sistema crece con la cantidad de proyectos sin esfuerzo adicional
+
+✅ REDUCCIÓN DE ERRORES Y OMISIONES
+Cero olvidos: Los recordatorios automáticos eliminan dependencia de la memoria humana
+
+Formato estandarizado: Presentación profesional uniforme en todas las comunicaciones
+
+Actualización centralizada: Cambios se aplican globalmente sin esfuerzo
+
 
 
 
